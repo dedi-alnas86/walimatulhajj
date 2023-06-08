@@ -56,6 +56,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="https://wedew.id/combine/afd7764b3b4dd683ea31a5a13ea1bff3-1684725985.css" />
 <link rel="stylesheet" href="https://wedew.id/combine/d1e2e5151b3a3eb389233c317ee27b0c-1682791473.css"> </head>
 <body>
+    <!-- Menambahkan plugin untuk memainkan musik -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+  <!-- Menambahkan file musik -->
+  <audio id="musik" src="labaik.mp3" loop></audio>
+
+  <!-- Script untuk memulai musik saat scroll atau klik -->
+  <script>
+    // Mendapatkan referensi elemen audio
+    var audio = document.getElementById("musik");
+
+    // Mendefinisikan fungsi untuk memulai musik
+    function startMusic() {
+      audio.play();
+      // Menghapus event listener setelah musik dimulai
+      window.removeEventListener("scroll", startMusic);
+      window.removeEventListener("click", startMusic);
+    }
+
+    // Menambahkan event listener untuk scroll
+    window.addEventListener("scroll", startMusic);
+
+    // Menambahkan event listener untuk klik
+    window.addEventListener("click", startMusic);
+  </script>
 <div class="website-blocks has-cover">
 <div class="website-cover">
 <section id="block-9Tmet" class="website-block hero bg-dark text-heading-light text-link-white text-white text-center font-size-sm bg-image bg-image-tile noshade overlay-none py-5 justify-content-center align-items-center" style="background-image: url(../storage.wedew.id/uploads/public/642/c69/24e/642c6924e9067694154879.png);">
@@ -280,8 +305,8 @@ Powered by Dakwahislami
 </a>
 </div>
 <div id="sc-wrapper" class="d-none">
-<iframe title width="0" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1298804377&amp;auto_play=true&amp;color=%232D66E5&amp;how_artwork=false&amp;sharing=false&amp;buying=false&amp;show_playcount=false&amp;download=false"></iframe>
-<script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+<!--<iframe title width="0" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1298804377&amp;auto_play=true&amp;color=%232D66E5&amp;how_artwork=false&amp;sharing=false&amp;buying=false&amp;show_playcount=false&amp;download=false"></iframe>
+<script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>!-->
 </div>
 <script>
     window.WEDEW_BACKGROUND_MUSIC = {
